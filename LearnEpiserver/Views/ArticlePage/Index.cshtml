@@ -1,0 +1,22 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model LearnEpiserver.Models.Pages.ArticlePage
+
+@{
+    Layout = "~/Views/Shared/_root.cshtml";
+}
+
+<h1>
+    @Html.DisplayFor(m => m.Title)
+</h1>
+<h2>
+    @Html.PropertyFor(m => m.Author)
+</h2>
+<h3>
+    @Html.PropertyFor(m => m.PostedOn)
+</h3>
+
+<div>
+    @Html.PropertyFor(m => m.MainBody)
+</div>

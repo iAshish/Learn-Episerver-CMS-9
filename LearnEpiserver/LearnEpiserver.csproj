@@ -236,16 +236,21 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Controllers\ArticlePageController.cs" />
+    <Compile Include="Controllers\JumbotronBlockController.cs" />
+    <Compile Include="Controllers\PageControllerBase.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Blocks\JumbotronBlock.cs" />
+    <Compile Include="Models\Pages\ArticlePage.cs" />
+    <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
-    <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Static\" />
@@ -265,6 +270,8 @@
     <Content Include="modules\_protected\CMS\CMS.zip" />
     <Content Include="Views\StartPage\Index.cshtml" />
     <Content Include="Views\Shared\_root.cshtml" />
+    <Content Include="Views\ArticlePage\Index.cshtml" />
+    <Content Include="Views\JumbotronBlock\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

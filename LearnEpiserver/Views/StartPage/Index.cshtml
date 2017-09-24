@@ -1,4 +1,5 @@
-﻿@model LearnEpiserver.Models.Pages.StartPage
+﻿@using EPiServer.Editor
+@model LearnEpiserver.Models.Pages.StartPage
 
 @{   
     Layout = "~/Views/Shared/_root.cshtml";
@@ -11,3 +12,9 @@
     </div>
 </div>
 
+<!-- Block Content Area -->
+@if (Model.MainContentArea != null || PageEditing.PageIsInEditMode)
+{
+    <!-- block content goes here -->
+    @Html.PropertyFor(x => x.MainContentArea)
+}
