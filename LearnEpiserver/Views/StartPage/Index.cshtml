@@ -1,0 +1,13 @@
+﻿@model LearnEpiserver.Models.Pages.StartPage
+
+@{   
+    Layout = "~/Views/Shared/_root.cshtml";
+}
+<div class="row">
+    
+    <div class="jumbotron">
+        <h1>@Html.PropertyFor(x => x.Heading)</h1>
+        <p>@Html.PropertyFor(x => x.MainBody)</p>
+    </div>
+</div>
+
