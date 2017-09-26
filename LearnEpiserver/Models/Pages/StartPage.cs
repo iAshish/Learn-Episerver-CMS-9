@@ -27,10 +27,17 @@ namespace LearnEpiserver.Models.Pages
         public virtual XhtmlString MainBody { get; set; }
 
         [Display(
+           Name = "Carousel",
+           Description = "Place to add Carousel items",
+           GroupName = SystemTabNames.Content,
+           Order = 3)]
+        public virtual ContentArea CarouselArea { get; set; }
+
+        [Display(
             Name = "Main Content Area",
             Description = "Place to add blocks",
             GroupName = SystemTabNames.Content,
-            Order = 3)]
+            Order = 4)]
         public virtual ContentArea MainContentArea { get; set; }
 
     }

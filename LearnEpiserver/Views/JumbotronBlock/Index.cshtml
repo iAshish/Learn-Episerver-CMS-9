@@ -1,12 +1,14 @@
 ﻿@model LearnEpiserver.Models.Blocks.JumbotronBlock
 
-<div class="jumbotron">
-    <div class="container">
-        <h1>@Html.PropertyFor(x => x.Header)</h1>
-        <p>
-            <img class="pull-left img-responsive" src="@Model.Image" width="100px" height="100px" />
-            @Html.PropertyFor(x => x.Description)
-        </p>
+
+<div class="card">
+    <img class="card-img-top" src="@Model.Image" alt="Card image cap">
+    <div class="card-body">
+        <h4 class="card-title">@Html.PropertyFor(x => x.Header)</h4>
+        <p class="card-text">@Html.PropertyFor(x => x.Description)</p>
+    </div>
+    <div class="card-footer">
+        @*<small class="text-muted">Last updated 3 mins ago</small>*@
         <p class="clearfix"><a class="btn btn-primary btn-lg " href="@Model.Url" role="button" target="_new">@Model.Button</a></p>
     </div>
 </div>
