@@ -28,6 +28,7 @@ namespace LearnEpiserver.Business
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap.js").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/umd/popper.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/style.css").Include(
